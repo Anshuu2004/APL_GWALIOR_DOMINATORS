@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 
-// Cache the upstream response so we don't burn through CricAPI free-tier quota
-// (~100 hits/day). 60s is enough to feel live without hammering the API.
-export const revalidate = 60;
+// CricAPI free tier is ~100 hits/day. With constant traffic, 60s revalidate
+// blew through the daily quota in hours. 15 min caps theoretical usage at ~96/day.
+export const revalidate = 900;
 
 type CricScoreItem = {
   id: string;
@@ -49,7 +49,7 @@ export async function GET() {
   try {
     const res = await fetch(
       `https://api.cricapi.com/v1/cricScore?apikey=${key}`,
-      { next: { revalidate: 60 } }
+      { next: { revalidate: 900 } }
     );
 
     if (!res.ok) {
