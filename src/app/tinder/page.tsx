@@ -175,7 +175,7 @@ export default function TinderPage() {
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-black via-rose-950/60 to-purple-950/60 text-white">
       <FloatingHearts />
 
-      <div className="relative mx-auto flex min-h-screen max-w-md flex-col px-5 py-6">
+      <div className="relative mx-auto flex min-h-screen w-full max-w-md flex-col px-5 py-6 md:max-w-2xl md:px-8 md:py-8 lg:max-w-3xl">
         <div className="flex items-center justify-between">
           <Link href="/home" className="text-sm text-pink-200/70 hover:text-white">
             ← Home
@@ -185,7 +185,7 @@ export default function TinderPage() {
 
         <header className="mt-6 text-center">
           <div className="text-6xl drop-shadow-[0_0_30px_rgba(244,114,182,0.6)]">💘🏏</div>
-          <h1 className="mt-2 bg-gradient-to-r from-pink-300 via-rose-300 to-purple-300 bg-clip-text font-heading text-3xl font-bold text-transparent">
+          <h1 className="mt-2 bg-gradient-to-r from-pink-300 via-rose-300 to-purple-300 bg-clip-text font-heading text-3xl font-bold text-transparent md:text-4xl lg:text-5xl">
             Cricket Tinder
           </h1>
           <p className="mt-1 text-sm text-pink-200/80">

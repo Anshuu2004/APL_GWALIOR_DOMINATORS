@@ -221,7 +221,7 @@ export default function WhyPage() {
   };
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-md flex-col px-5 py-6">
+    <main className="mx-auto flex min-h-screen w-full max-w-md flex-col px-5 py-6 md:max-w-3xl md:px-8 md:py-8 lg:max-w-4xl lg:px-10">
       {/* Top nav */}
       <div className="flex items-center justify-between">
         <Link href="/home" className="text-sm text-muted-foreground hover:text-foreground">
@@ -266,7 +266,7 @@ export default function WhyPage() {
           {pending ? "Thinking..." : "🎙️  Explain Last Over"}
         </Button>
 
-        <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
+        <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3 lg:gap-3">
           {QUICK_QUESTIONS.slice(1).map((q) => (
             <button
               key={q.label}

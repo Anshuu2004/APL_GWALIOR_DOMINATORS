@@ -103,7 +103,7 @@ export default function RoastPage() {
   };
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-md flex-col px-5 py-6">
+    <main className="mx-auto flex min-h-screen w-full max-w-md flex-col px-5 py-6 md:max-w-3xl md:px-8 md:py-8 lg:max-w-5xl lg:px-12">
       {/* Top nav */}
       <div className="flex items-center justify-between">
         <Link href="/home" className="text-sm text-muted-foreground hover:text-foreground">
@@ -113,7 +113,7 @@ export default function RoastPage() {
       </div>
 
       <header className="mt-4">
-        <h1 className="font-heading text-2xl font-bold">
+        <h1 className="font-heading text-2xl font-bold md:text-3xl lg:text-4xl">
           Pick a team. <span className="text-[var(--gold)]">Watch them burn.</span> 🔥
         </h1>
         <p className="mt-1 text-sm text-muted-foreground">
@@ -123,7 +123,7 @@ export default function RoastPage() {
 
       {/* Team grid */}
       {!selectedTeam && (
-        <section className="mt-5 grid grid-cols-2 gap-3">
+        <section className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-4">
           {iplData.teams.map((t) => (
             <TeamCard
               key={t.id}

@@ -26,7 +26,7 @@ export function TeamCard({ team, selected, onClick, showTagline }: Props) {
         color: team.colors.text,
       }}
       className={[
-        "group relative w-full overflow-hidden rounded-xl p-4 text-left transition-all",
+        "group relative w-full overflow-hidden rounded-xl p-4 text-left transition-all md:p-5 lg:p-6",
         "ring-1 ring-white/10 shadow-md",
         "hover:scale-[1.02] hover:shadow-xl hover:ring-white/30",
         "active:scale-[0.98]",
@@ -34,7 +34,7 @@ export function TeamCard({ team, selected, onClick, showTagline }: Props) {
       ].join(" ")}
     >
       <div className="flex items-center justify-between gap-2">
-        <span className="text-2xl font-bold tracking-wide drop-shadow-sm">
+        <span className="text-2xl font-bold tracking-wide drop-shadow-sm md:text-3xl">
           {team.shortName}
         </span>
         {selected && (
@@ -45,7 +45,7 @@ export function TeamCard({ team, selected, onClick, showTagline }: Props) {
           </span>
         )}
       </div>
-      <div className="mt-1 text-sm font-medium leading-tight opacity-95">
+      <div className="mt-1 text-sm font-medium leading-tight opacity-95 md:text-base">
         {team.name}
       </div>
       {showTagline && team.tagline && (

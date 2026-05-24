@@ -5,7 +5,6 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import iplData from "@/data/iplData.json";
 import { MatchHeader } from "@/components/MatchHeader";
-import { LiveScoreRail } from "@/components/LiveScoreRail";
 import {
   clearProfile,
   loadProfile,
@@ -97,7 +96,7 @@ export default function HomeDashboard() {
     );
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-md flex-col px-5 py-6">
+    <main className="mx-auto flex min-h-screen w-full max-w-md flex-col px-5 py-6 md:max-w-3xl md:px-8 md:py-8 lg:max-w-6xl lg:px-12 lg:py-10">
       {/* Profile chip + reset */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
@@ -127,7 +126,7 @@ export default function HomeDashboard() {
 
       {/* Greeting */}
       <header className="mt-5">
-        <h1 className="font-heading text-2xl font-bold">
+        <h1 className="font-heading text-2xl font-bold md:text-3xl lg:text-4xl">
           Hey {team?.shortName} fan! 👋
         </h1>
         {heroLiveIpl ? (
@@ -190,13 +189,8 @@ export default function HomeDashboard() {
         )}
       </div>
 
-      {/* Live worldwide rail (excludes the one already promoted to hero) */}
-      <div className="mt-4">
-        <LiveScoreRail excludeIds={heroLiveIpl ? [heroLiveIpl.id] : []} />
-      </div>
-
       {/* Feature cards */}
-      <section className="mt-6 flex flex-1 flex-col gap-4">
+      <section className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
         <Link
           href="/why"
           className="group block overflow-hidden rounded-2xl bg-card p-5 ring-1 ring-white/10 transition-all hover:scale-[1.02] hover:ring-[var(--gold)]/50 hover:shadow-xl active:scale-[0.99]"

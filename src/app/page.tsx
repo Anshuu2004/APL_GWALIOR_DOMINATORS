@@ -43,10 +43,10 @@ export default function Onboarding() {
   };
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-md flex-col px-5 py-8">
+    <main className="mx-auto flex min-h-screen w-full max-w-md flex-col px-5 py-8 md:max-w-2xl md:px-8 md:py-10 lg:max-w-4xl lg:px-12 lg:py-12">
       <header className="mb-6 text-center">
         <div className="text-4xl">🏏</div>
-        <h1 className="mt-2 font-heading text-3xl font-bold">
+        <h1 className="mt-2 font-heading text-3xl font-bold md:text-4xl lg:text-5xl">
           Meet your <span className="text-[var(--gold)]">AI cricket buddy</span>
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
@@ -62,7 +62,7 @@ export default function Onboarding() {
             title="Pick your team"
             subtitle="We'll cheer with you (and roast everyone else)."
           >
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-4">
               {iplData.teams.map((t) => (
                 <TeamCard
                   key={t.id}
@@ -80,7 +80,7 @@ export default function Onboarding() {
             title="Pick your language"
             subtitle="We'll talk to you in this from now on."
           >
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 lg:gap-4">
               {(Object.keys(LANGUAGE_LABELS) as Language[]).map((lang) => (
                 <button
                   key={lang}
