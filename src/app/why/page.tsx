@@ -85,7 +85,7 @@ export default function WhyPage() {
       }
     };
     load();
-    const id = setInterval(load, 60_000);
+    const id = setInterval(load, 300_000);
     return () => {
       cancelled = true;
       clearInterval(id);
